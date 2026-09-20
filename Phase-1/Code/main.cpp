@@ -61,7 +61,7 @@ int main() {
                     tags.push_back(tag.get<string>());
                 }
             }
-            float minCgpa = 7.0;
+            double minCgpa = 7.0;
             string eligibleBranch = "CSE";
 
             internships.push_back(Internship(company,title,tags,minCgpa,eligibleBranch));

@@ -9,31 +9,12 @@ class Internship
     string company;
     string role;
     vector<string>requiredskills;
-    float mincgpa;
+    double mincgpa;
     string eligiblebranch;
     public:
-    Internship(string c,string r,vector<string>skills,float m,string b)
-    {
-        company=c;
-        role=r;
-        requiredskills=skills;
-        mincgpa=m;
-        eligiblebranch= b;
-    }
-    void display()
-    {
-        cout<<"\nCompany Name:"<<company;
-        cout<<"\nRole:"<<role;
-        cout<<"\nRequired Skills:";
-        for(int i=0;i<requiredskills.size();i++)
-        {
-            cout<<requiredskills[i];
-            if(i<requiredskills.size()-1)
-            {
-                cout<<", ";
-            }
-        }
-        cout<<"\nMinimum CGPA:"<<mincgpa;
-        cout<<"\nEligible Branches:"<<eligiblebranch;
-    }
+    Internship(string c,string r,vector<string>skills,double m,string b);
+    void display();
+    vector<string> getrequiredskills();
+    double getmincgpa();
+    string geteligiblebranch();
 };
